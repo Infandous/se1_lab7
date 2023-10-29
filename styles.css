@@ -1,0 +1,55 @@
+body{
+	background-color:black;
+	display:flex;
+	flex-direction:column;
+}
+
+body h1{
+	background-color:blue;
+	color:white;
+}
+
+#headerDiv{
+	display:flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+	color:white;
+}
+
+#headerDiv a{
+	color:white;
+}
+
+#personalDiv{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:space-evenly;
+	background-color:blue;
+	color:white;
+}
+
+#photo img{
+	width:auto;
+	height:450px;
+	max-width:100%;
+}
+
+#randomDiv{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	color:white;
+}
+
+#bottomDiv{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	background-color:blue;
+	color:white;
+}
+
+body #bottomDiv > a{
+	color:white;
+}

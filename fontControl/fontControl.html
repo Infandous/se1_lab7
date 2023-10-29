@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+        <head>
+                <meta charset="UTF-8">
+<style><!--inline css-->
+	#dummyText{
+                color:black;
+		background-color:white;
+		border-style: solid;
+		padding:10px;
+        }
+
+</style>
+        </head>
+        <body>
+		<h1>Lab 7: Font control</h1>
+                <p id='dummyText'>
+                Va' pensiero, sull'ali dorate<br>
+                Va', ti posa sui clivi, sui colli<br>
+                Ove olezzano trepide e molli<br>
+                L'aure dolci del suolo natal<br><br>
+
+                Del Giordano le rive saluta<br>
+                Di Sionne le torri atterrate<br>
+                Oh mia patria, sì bella e perduta<br>
+                Oh, membranza sì cara e fatal<br><br>
+
+                Arpa d'or dei fatidici vati<br>
+                Perché muta dal salice pendi?<br>
+                Le memorie nel petto raccendi<br>
+                Ci favella del tempo che fu<br><br>
+
+                O t'ispiri, il Signore un concento<br>
+                Che ne infonda al patire virtù<br>
+                Che ne infonda al patire virtù<br>
+                Che ne infonda al patire virtù<br>
+                Al patire virtù<br>
+                </p>
+
+        
+		<form> <!--form for input values-->
+			Text Color (r,g,b):
+			<input type="text" placeholder="0,0,255" id="textColor">
+			<br>
+			Border color (r,g,b):
+			<input type="text" placeholder="0,0,255" id="borderColor">
+			<br>
+			Border width (pixels):
+			<input type="text" placeholder = "10" id="borderWidth">
+			<br>
+		</form>
+
+		<script> //inline JS to handle events
+			const text_color = document.getElementById('textColor');
+			const border_color = document.getElementById('borderColor');
+			const border_width = document.getElementById('borderWidth');
+			const text = document.getElementById('dummyText');
+
+			//add event listeners
+			text_color.addEventListener('input', (event)=>{
+				//const vals = event.target.value.split(',').map(Number); //create an array of the rgb values stored as numbers
+				text.style.color = `rgb(${event.target.value})`;
+			});
+			border_color.addEventListener('input',(event)=>{
+				text.style.borderColor = `rgb(${event.target.value})`;
+				text.style.borderStyle = 'solid';
+			});
+			border_width.addEventListener('input', (event)=>{
+				if (event.target.value>=0)
+					text.style.borderWidth = `${event.target.value}px`;
+			});
+			
+		</script>
+
+	</body>
+
+</html>
+                                                                                                                                       
+
